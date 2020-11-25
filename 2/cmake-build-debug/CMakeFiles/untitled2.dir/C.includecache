@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Artem/Desktop/Univ/Proga/Labs/untitled2/main.c
+stdio.h
+-
+math.h
+C:/Users/Artem/Desktop/Univ/Proga/Labs/untitled2/math.h
+
