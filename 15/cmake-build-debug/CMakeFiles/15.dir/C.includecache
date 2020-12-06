@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Artem/Desktop/Univ/Proga/Labs/15/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+math.h
+-
+
