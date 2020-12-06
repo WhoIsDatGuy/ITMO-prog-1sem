@@ -4,7 +4,7 @@
 #include <limits.h>
 #include <math.h>
 
-void create_arc(char* filename, int number_of_files, char* files[]){
+void create(char* filename, int number_of_files, char* files[]){
     FILE *file;
     file = fopen(filename, "w");
 
@@ -27,7 +27,7 @@ void create_arc(char* filename, int number_of_files, char* files[]){
     }
 }
 
-void get_extract(char* filename){
+void extract(char* filename){
     FILE *file;
     file = fopen(filename, "r");
     fseek(file, 0, SEEK_END); //Указатель в конец файла
@@ -49,7 +49,7 @@ void get_extract(char* filename){
     }
 }
 
-void get_list(char* filename){
+void list(char* filename){
     FILE *file;
     file = fopen(filename, "r");
     fseek(file, 0, SEEK_END);
@@ -74,13 +74,13 @@ int main (int argc, char* argv[]){
     strcpy(filename, argv[2]);
     if (argc > 4){
         int number_of_files = argc - 4;
-        create_arc(filename, number_of_files, &argv[4]);
+        create(filename, number_of_files, &argv[4]);
     }
     else if (!(strcmp(argv[3], "--extract"))){
-        get_extract(filename);
+        extract(filename);
     }
     else{
-        get_list(filename);
+        list(filename);
     }
     printf("---------------------------\n");
     return 0;
